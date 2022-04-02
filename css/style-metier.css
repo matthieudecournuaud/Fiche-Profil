@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+/*-------------------------------------------------------- v  Bloc bandau v ----------------------------------------------*/
+body {
+    font-family: 'roboto';
+    height: 100vh;
+    font-size: 16px;
+}
+
+.photo-identite {
+    margin-left: 65px;
+    border-radius: 50%;
+    padding: 20px;
+    width: 10%;
+}
+.identite {
+    display: flex;
+    color: white;
+    background-color: #191a24;
+}
+.reference a{
+    text-decoration: none;
+    color: white;
+
+}
+.reference {
+    margin-left: 30px;
+    font-family: 'roboto', sans-serif;
+    padding: 30px;
+    text-align: left; 
+}
+.espace-top{
+    margin-top: 16px;
+    line-height: 1.5em;
+}
+/*_____________________________________________________ v NAV v ________________________________________________________*/
+nav {
+    right: 0;
+    left: 0;
+    position: absolute;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+nav ul a{
+    width: 274px;
+    height: 92px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: floralwhite;
+    font-family: 'roboto';
+    font-size: xx-large;
+    text-decoration: none;
+}
+nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#active{
+     width: 274px;
+    height: 92px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto';
+    font-size: xx-large;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: #B92A55;
+    color: white;
+    text-align: center;
+}
+.no-hover1{
+    position: absolute;
+    width: 110px;
+    height: 42px;
+    pointer-events: none;
+}
+.no-hover2{
+    position: absolute;
+    width: 270px;
+    height: 42px;
+    pointer-events: none;
+}
+.no-hover3{
+    position: absolute;
+    width: 104px;
+    height: 42px;
+    pointer-events: none;
+}
+#active::before{
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    background: radial-gradient(circle closest-side, #E98A46, transparent);
+    opacity: 60%;
+    width: var(--size);
+    height: var(--size);
+    transform: translate(-50%, -100%);
+    transition: 0.12s ease;
+}
+#active:hover::before{
+    --size:400px;
+}
+/*---------------------------------------------------- v body-metier v --------------------------------------------------------*/
+.body-metier{
+    /* background:linear-gradient(to right, #262736 45%, #B92A55); */
+    background-color: #262736;
+    background-attachment: fixed;
+}
+#contenant-blocs-metier{
+    margin-top: 92px;
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+#contenant-blocs-metier > article > div:not(:first-child){
+    margin-top: 30px;
+}
+/*------------------------------- v bloc back metier v -------------------------------*/
+#bloc-back{
+    text-align: center;
+    color: white;
+    font-family: 'roboto';
+    font-size: 14px;
+}
+.contenant-titre-back{
+    font-family: 'roboto';
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.metier-blocs{
+    border-radius: 15px ;
+    width: 260px;
+    height: 170px;
+    background: #262736;
+    box-shadow:  inset 10px 10px 12px #121219,
+                 inset -10px -10px 12px #3a3c53;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'roboto';
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.sectionliquid h3{
+    z-index: 10000;
+}
+/*------------------------------- v bloc front metier v -------------------------------*/
+#bloc-front{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'roboto';
+    font-size: 14px;
+}
+.contenant-titre-front{
+    font-family: 'roboto';
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#titre-front{
+    color: white;
+}
+.sectionliquidtest{
+    bottom: 0;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0 0 15px 15px;
+}
+.metier-blocs h3{
+    z-index: 1000;
+    font-family: 'roboto';
+    font-size: 16px;
+    position: relative;
+}
+.valeur{  
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-family: 'roboto';
+    font-size: 16px;
+    text-align: center;
+}
+.liquid{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#E98A46, #B92A55);
+    width: 260px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+.liquidtest{
+    position: absolute;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.sectionliquid .liquid.position25::before,
+.sectionliquid .liquid.position25::after{
+                             /*---------------*/
+    bottom: -550px; 
+}
+.sectionliquid .liquid.position50::before,
+.sectionliquid .liquid.position50::after{
+                             /*---------------*/
+    bottom: -510px;
+}
+.sectionliquid .liquid.position75::before,
+.sectionliquid .liquid.position75::after{
+                             /*---------------*/
+    bottom: -490px;
+}
+.sectionliquid .liquid.position100::before,
+.sectionliquid .liquid.position100::after{
+                             /*---------------*/
+    bottom: -430px;
+}
+.sectionliquid .liquid::before,
+.sectionliquid .liquid::after{
+    content: '';    
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    transition: 2s ease;
+                                  /*---------------*/
+    bottom: -580px;
+    left: 130px;
+}
+.sectionliquid .liquid::before{
+    border-radius: 45%;
+    background: rgba(38, 39, 54, 1);
+    animation: animate 5s linear infinite;
+}
+.sectionliquid .liquid::after{
+    border-radius: 42%;
+    background: rgba(38, 39, 54, 0.5);
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translate(-50%,-75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-75%) rotate(360deg);
+    }
+} 
+/*---------------------------------------------------- v Footer v --------------------------------------------------------*/
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-color: #191a24;
+}
+
+footer img{
+    padding: 24px 16px;
+    display: inline-block;
+}
